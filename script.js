@@ -7,7 +7,7 @@ $(document).ready(function() {
   var availableBoards = {};
   var availableTasks = {};
 
-  // init
+// init
 
   getAllTasks();
 
@@ -101,6 +101,11 @@ $(document).ready(function() {
         parentEl.attr('data-task-id', data.id).toggleClass('datatable__row--editing');
         parentEl.find('[data-task-name-paragraph]').text(taskTitle);
         parentEl.find('[data-task-content-paragraph]').text(taskContent);
+      },
+      complete: function(data) {
+        if(data.status === 200) {
+          getAllTasks();
+        }
       }
     });
   }
@@ -188,10 +193,10 @@ $(document).ready(function() {
         description: relatedTask.content,
         listId: selectedListId
       }),
-      success: function(data) {
+		success: function(data) {
         console.log('Card created - ' + data.shortUrl);
         alert('Card created - ' + data.shortUrl);
-      }
+      }	
     });
   }
 
