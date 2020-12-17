@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  const apiRoot = 'https://whispering-waters-87894.herokuapp.com/v1/';
-  const trelloApiRoot = 'https://whispering-waters-87894.herokuapp.com/v1/trello/';
+  const apiRoot = 'https://enigmatic-river-72951.herokuapp.com/v1/';
+  const trelloApiRoot = 'https://enigmatic-river-72951.herokuapp.com/v1/trello/';
   const datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
   const $tasksContainer = $('[data-tasks-container]');
 
